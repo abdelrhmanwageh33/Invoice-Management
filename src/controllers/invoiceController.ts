@@ -43,7 +43,7 @@ export const getInvoices = async (
     res.status(500).json({
       message: "Error fetching invoices",
       error,
-    });
+    });+6
   }
 };
 // Get a single invoice by ID
@@ -125,18 +125,3 @@ export const deleteInvoice = async (
 };
 
 
-export const getDoctorInvoices= async(
-  req: Request,
-  res: Response
-): Promise<void> => {
-  try{
-    const doctorName = req.query.doctorName  as string;
-    const invoices = await Invoice.find({ doctorName: doctorName });
-    res.status(200).json(invoices);
-  }catch(error){
-    res.status(500).json({
-      message: "Error fetching doctor's invoices",
-      error,
-    });
-  }
-}

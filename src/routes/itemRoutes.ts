@@ -7,7 +7,6 @@ import {
   updateInvoice,
   deleteInvoice,
  
-  getDoctorInvoices,
 } from "../controllers/invoiceController";
 import  validateRequest  from "../middleware/validate";
 import { createInvoiceSchema } from "../validators/invoiceValidator";
